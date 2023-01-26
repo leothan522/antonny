@@ -37,7 +37,7 @@
                                 <img class="img-profile rounded-circle"
                                 <?php 
                                 if($modulo == "dashboard") { 
-                                    $img_tobar = "../../plantilla/img/undraw_profile.svg";
+                                    $img_tobar = "../plantilla/img/undraw_profile.svg";
                                  }else{ 
                                     $img_tobar = "../../plantilla/img/undraw_profile.svg";
                                   } 
