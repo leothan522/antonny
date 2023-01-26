@@ -54,6 +54,22 @@ function getFirmante($cargo)
     return $rows['id'];;
 }
 
+function validarSelloFirmante()
+{
+    $query = new Query();
+    $rows = null;
+    $sqlFirmantes = "SELECT * FROM `firmantes` WHERE `band` = 1;";
+    $sqlSello = "SELECT * FROM `sellos` WHERE `band` = 1;";
+    $sello = $query->getFirst($sqlSello);
+    $firmante = $query->getFirst($sqlFirmantes);
+    if ($sello && $firmante){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
 function crearDestinatario($profesion, $nombre, $cargo, $id)
 {
     $row = null;
