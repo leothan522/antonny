@@ -52,6 +52,9 @@
                                     
                                     </form>
                                     <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="../web/">Volver al Inicio</a>
+                                    </div>
                                     
                                 </div>
                             </div>
