@@ -1,14 +1,5 @@
 <?php
-// start a session
-session_start();
-require "../seguridad.php";
-require "../../mysql/Query.php";
-$modulo = "gacetas";
-$alert = null;
-$message = null;
-$agendas = null;
-
-
+require "funciones.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -34,6 +25,10 @@ $agendas = null;
 
     <!-- Custom styles for this page -->
     <link href="../../plantilla/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plantilla/vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../../plantilla/vendor/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 
 </head>
 
@@ -100,12 +95,7 @@ $agendas = null;
     <!-- Custom scripts for all pages-->
     <script src="../../plantilla/js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="../../plantilla/vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="../../plantilla/js/demo/chart-area-demo.js"></script>
-    <script src="../../plantilla/js/demo/chart-pie-demo.js"></script>
 
     <!-- Page level plugins -->
     <script src="../../plantilla/vendor/datatables/jquery.dataTables.js"></script>
@@ -113,6 +103,13 @@ $agendas = null;
 
     <!-- Page level custom scripts -->
     <script src="../../plantilla/js/demo/datatables-demo.js"></script>
+
+    <!-- Sweetalert2 -->
+    <script src="../../plantilla/js/sweetalert2.all.min.js"></script>
+
+    <!-- Select2 -->
+    <script src="../../plantilla/vendor/select2/js/select2.full.min.js"></script>
+    <script src="app.js"></script>
 
 
 </body>

@@ -7,7 +7,7 @@
     <form  method="POST" id="form_asistencias">
 
     <div class="form-group" >
-            <lavel>Tipo</label>
+            <label>Tipo</label>
             <select class="form-control" name="invitado" id="input_invitado" required>
                 <option value="">Seleccione</option>
                 <option value="MIEMBROS">MIEMBROS</option>   
