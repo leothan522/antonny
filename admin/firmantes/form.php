@@ -30,8 +30,8 @@
 
        
 
-        <input type="text" name="opcion" value="guardar" id="input_opcion" />
-        <input type="text" name="firmantes_id" id="input_firmantes_id" />
+        <input type="hidden" name="opcion" value="guardar" id="input_opcion" />
+        <input type="hidden" name="firmantes_id" id="input_firmantes_id" />
 
         <button type="submit" class="btn btn-primary">Guardar</button>
         <button type="reset" class="btn btn-secondary float-right" id="btn_cancelar">Cancelar</button>
