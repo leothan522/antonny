@@ -1,3 +1,6 @@
+<?php
+require "funciones.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,10 +38,10 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
+            <div id="content" class="mt-3">
 
                 <!-- Topbar -->
-                <?php require('topbar.php'); ?>
+                <?php /*require('topbar.php'); */?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -49,6 +52,7 @@
 
 
                     <!-- contenido -->
+                    <?php require "content.php"; ?>
 
 
                 </div>

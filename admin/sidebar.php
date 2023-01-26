@@ -3,7 +3,7 @@
             <!-- Sidebar - Brand -->
                 <?php
                 if($modulo == "dashboard") {
-                    $url = "#";
+                    $url = "../web/";
                 }else{
                     $url = "../";
                 }
