@@ -1,23 +1,5 @@
 <?php
-// start a session
-session_start();
-require "../seguridad.php";
-require "../../mysql/Query.php";
-$modulo = "resoluciones";
-
-
-
-function getResoluciones()
-{
-    $query = new Query();
-    $rows = null;
-    $sql = "SELECT * FROM `resoluciones` WHERE `band`= 1 ";
-    $rows = $query->getAll($sql);
-    return $rows;
-}
-
-$usuarios = getResoluciones();
-
+require "funciones.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -109,14 +91,18 @@ $usuarios = getResoluciones();
     <!-- Custom scripts for all pages-->
     <script src="../../plantilla/js/sb-admin-2.min.js"></script>
 
-   
-
     <!-- Page level plugins -->
     <script src="../../plantilla/vendor/datatables/jquery.dataTables.js"></script>
     <script src="../../plantilla/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="../../plantilla/js/demo/datatables-demo.js"></script>
+
+    <!-- Sweetalert2 -->
+    <script src="../../plantilla/js/sweetalert2.all.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+
+
 
 
 </body>

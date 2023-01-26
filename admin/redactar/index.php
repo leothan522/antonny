@@ -1,79 +1,5 @@
 <?php
-// start a session
-session_start();
-require "../seguridad.php";
-require "../../mysql/Query.php";
-$alert = null;
-$message = null;
-$modulo = "resoluciones";
-
-
-
-function getResoluciones()
-{
-    $query = new Query();
-    $rows = null;
-    $sql = "SELECT * FROM `resoluciones` ";
-    $rows = $query->getAll($sql);
-    return $rows;
-}
-
-function crearResoluciones($codigo, $de, $fecha, $asunto, $descripcion, $cc)
-{
-    $row = null;
-    $query = new Query();
-    $sql1 = "SELECT * FROM `resoluciones`";
-    $exite = $query->getFirst($sql1);
-
-    if ($exite) {
-
-        return false;
-
-    } else {
-
-        
-        $sql = "INSERT INTO `resoluciones` (`codigo`, `de`, `fecha`, `asunto`, `descripcion`, `cc`) VALUES ('$codigo', '$de', '$fecha', '$asunto', '$descripcion', '$cc',);";
-        $row = $query->save($sql);
-        return $row;
-
-    }
-
-
-}
-
-if ($_POST) {
-    //GUARDAR NUEVO USUARIO
-    if ($_POST['opcion'] == "guardar") {
-
-        if (!empty($_POST['codigo']) && !empty($_POST['de']) && !empty($_POST['fecha']) && !empty($_POST['asunto']) && !empty($_POST['descripcion']) && !empty($_POST['cc'])) {
-
-            $codigo = $_POST['codigo'];
-            echo $codigo;
-            $de = $_POST['de'];
-            $fecha = $_POST['fecha'];
-            $asunto = $_POST['asunto'];
-            $descripcion = $_POST['descripcion'];
-            $cc = $_POST['cc'];
-
-            $resoluciones = crearResoluciones($codigo, $de, $fecha, $asunto, $descipcion, $cc);
-
-            if ($resoluciones) {
-
-
-                $alert = "success";
-                $message = "Usuario creado exitosimansansw";
-
-
-            } else {
-                $alert = "danger";
-                $message = "faltan datos";
-            }
-
-        }
-    }
-}
-$resoluciones = getResoluciones();
-
+require "funciones.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -99,6 +25,12 @@ $resoluciones = getResoluciones();
 
     <!-- Custom styles for this page -->
     <link href="../../plantilla/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <!--<link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">-->
+    <link rel="stylesheet" href="../../plantilla/vendor/select2/css/select2.min.css">
+    <!--<link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">-->
+    <link rel="stylesheet" href="../../plantilla/vendor/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 
 </head>
 
@@ -171,6 +103,11 @@ $resoluciones = getResoluciones();
 
     <!-- Page level custom scripts -->
     <script src="../../plantilla/js/demo/datatables-demo.js"></script>
+
+    <!-- Select2 -->
+    <!--<script src="../../plugins/select2/js/select2.full.min.js"></script>-->
+    <script src="../../plantilla/vendor/select2/js/select2.full.min.js"></script>
+    <script src="app.js"></script>
 
 
 </body>

@@ -1,29 +1,39 @@
-<?php 
+<?php
 // start a session
 session_start();
 require "../seguridad.php";
 require "../../mysql/Query.php";
 $modulo = "resoluciones";
-
 $alert = null;
 $message = null;
 
-function getSesiones()
+function getResoluciones()
 {
     $query = new Query();
     $rows = null;
-    $sql = "SELECT * FROM `sesiones`;";
+    $sql = "SELECT * FROM `resoluciones` WHERE `band`= 1; ";
     $rows = $query->getAll($sql);
     return $rows;
 }
 
-function getDestinatarios()
+function getSesion($id)
 {
+    $row = null;
     $query = new Query();
-    $rows = null;
-    $sql = "SELECT * FROM `destinatarios`;";
-    $rows = $query->getAll($sql);
-    return $rows;
+    $sql = "SELECT * FROM `sesiones` WHERE `id` = '$id'";
+    $row = $query->getFirst($sql);
+    return $row;
+}
+
+//ELIMINAR
+function eliminarResolucion($id)
+{
+    $row = null;
+    $query = new Query();
+    $hoy = date("Y-m-d");
+    $sql = "UPDATE `resoluciones` SET `band`='0', `update_at`='$hoy' WHERE `id`='$id';";
+    $row = $query->save($sql);
+    return $row;
 }
 
 function getSello()
@@ -78,32 +88,9 @@ function crearResolucion($sesiones_id, $codigo, $profesion, $nombre, $cargo, $de
     return $row;
 }
 
-function editarResolucion($sesiones_id, $codigo, $profesion, $nombre, $cargo, $de, $fecha, $asunto, $descripcion, $cc, $id)
-{
-    $row = null;
-    $query = new Query();
-    $hoy = date("Y-m-d");
-
-    $sql = "UPDATE `resoluciones` SET `sesiones_id`='$sesiones_id', `codigo`='$codigo', `profesion`='$profesion', `nombre`='$nombre', `cargo`='$cargo', `de`='$de', 
-    `fecha`='$fecha', `asunto`='$asunto', `descripcion`='$descripcion', `cc`='$cc', `update_at`='$hoy' WHERE  `id`=$id;";
-    $row = $query->save($sql);
-    return $row;
-}
-
-function getResol($id)
-{
-    $query = new Query();
-    $rows = null;
-    $sql = "SELECT * FROM `resoluciones` WHERE `id` = $id;";
-    $rows = $query->getFirst($sql);
-    return $rows;
-}
-
 if ($_POST) {
-    //GUARDAR NUEVO
-    if ($_POST['opcion'] == "guardar") {
 
-        /*$sesiones_id, $codigo, $profesion, $nombre, $cargo, $de, $fecha, $asunto, $descripcion, $cc*/
+    if ($_POST['opcion'] == "guardar") {
 
         if (!empty($_POST['sesion_id']) && !empty($_POST['codigo']) && !empty($_POST['profesion']) && !empty($_POST['nombre']
                 && !empty($_POST['cargo']) && !empty($_POST['de']) && !empty($_POST['fecha']) && !empty($_POST['asunto'])
@@ -139,6 +126,7 @@ if ($_POST) {
                 $message = "error";
             }
 
+
         } else {
 
             $alert = "danger";
@@ -148,63 +136,33 @@ if ($_POST) {
 
     }
 
-    //EDITAR
-    if ($_POST['opcion'] == "editar") {
 
-        /*$sesiones_id, $codigo, $profesion, $nombre, $cargo, $de, $fecha, $asunto, $descripcion, $cc*/
+    //ELIMINAR
+    if ($_POST['opcion'] == "eliminar") {
 
-        if (!empty($_POST['sesion_id']) && !empty($_POST['codigo']) && !empty($_POST['profesion']) && !empty($_POST['nombre']
-                && !empty($_POST['cargo']) && !empty($_POST['de']) && !empty($_POST['fecha']) && !empty($_POST['asunto'])
-                && !empty($_POST['descripcion'])&& !empty($_POST['cc']))) {
+        if (!empty($_POST['resoluciones_id'])){
 
-            $sesiones_id = $_POST['sesion_id'];
-            $codigo = $_POST['codigo'];
-            $profesion = $_POST['profesion'];
-            $nombre = $_POST['nombre'];
-            $cargo = $_POST['cargo'];
-            $de = $_POST['de'];
-            $fecha = $_POST['fecha'];
-            $asunto = $_POST['asunto'];
-            $descripcion = $_POST['descripcion'];
-            $cc = $_POST['cc'];
-            $resoluciones_id = $_POST['resoluciones_id'];
+            $id = $_POST['resoluciones_id'];
 
-            $resolucion = editarResolucion($sesiones_id, $codigo, $profesion, $nombre, $cargo, $de, $fecha, $asunto, $descripcion, $cc, $resoluciones_id);
+            $eliminar = eliminarResolucion($id);
 
-            if($resolucion){
-
+            if ($eliminar) {
                 $alert = "success";
-                $message = "Guardado exitosimansansw";
-
-
+                $message = "Emilinado";
             } else {
-                $alert = "danger";
-                $message = "error";
+                $alert = "warning";
+                $message = "Error";
             }
 
         } else {
-
             $alert = "danger";
             $message = "faltan datos";
-
         }
 
     }
+
 }
 
-if ($_GET)
-{
-    if(!empty($_GET['id'])){
-        $resol_id = $_GET['id'];
-        $get_resol = getResol($resol_id);
-    }else{
-        $resol_id = false;
-    }
-}else{
-    $resol_id = false;
-}
-
-$sesiones = getSesiones();
-$destinatarios = getDestinatarios();
+$resoluciones = getResoluciones();
 
 ?>
