@@ -47,7 +47,7 @@
                                                     <i class="fas fa-file-pdf"></i>
                                                 </a>
                                                 <a href="../redactar/index.php?id=<?php echo $resolucion['id']; ?>" class="btn btn-warning btn-circle btn-sm">
-                                                    <i class="fas fa-user-edit"></i>
+                                                    <i class="far fa-edit"></i>
                                                 </a>
                                                 <button type="button" class="btn btn-danger btn-circle btn-sm elim-res"
                                                         data-id="<?php echo $resolucion['id']; ?>">

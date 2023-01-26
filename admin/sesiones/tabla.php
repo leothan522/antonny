@@ -53,7 +53,7 @@
                                                 <button type="button" class="btn btn-warning btn-circle btn-sm edit-sesion"
                                                 data-codigo="<?php echo $sesion['codigo']; ?>" data-fecha="<?php echo $sesion['fecha']; ?>" 
                                                 data-tipo="<?php echo $sesion['tipo']; ?>" data-id="<?php echo $sesion['id']; ?>" data-hora="<?php echo $sesion['hora']; ?>" >
-                                                    <i class="fas fa-user-edit"></i>
+                                                    <i class="far fa-edit"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-danger btn-circle btn-sm elim-sesion"
                                                         data-id="<?php echo $sesion['id']; ?>">

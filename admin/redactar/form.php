@@ -9,7 +9,7 @@
         <div class="form-group">
             <label>Codigo de Sesion</label>
             <select class="form-control select2bs4" name="sesion_id" required>
-                <option>Seleccione</option>
+                <option value="">Seleccione</option>
                 <?php foreach ($sesiones as $sesion){ ?>
                     <option <?php if ($resol_id && $get_resol['sesiones_id'] == $sesion['id']){ echo 'selected="selected"'; } ?> value="<?php echo $sesion['id'] ?>"><?php echo "Sesion ".$sesion['tipo']." ".$sesion['codigo'] ?></option>
                 <?php  } ?>
@@ -83,8 +83,8 @@
         <input type="hidden" name="opcion" value="<?php if ($resol_id){ echo "editar"; }else{ echo "guardar"; } ?>" id="input_opcion" />
         <input type="hidden" name="resoluciones_id" value="<?php if ($resol_id){ echo $get_resol['id']; } ?>" id="input_redactar_id" />
 
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <a href="../resoluciones/" class="btn btn-secondary float-right" id="btn_cancelar">Cancelar</a>
+        <a href="../resoluciones/" class="btn btn-secondary" id="btn_cancelar">Cancelar</a>
+        <button type="submit" class="btn btn-primary float-right">Guardar</button>
 
     </form>
         

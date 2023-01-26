@@ -47,7 +47,7 @@
                                                         data-fecha="<?php echo $gaceta['fecha']; ?>"
                                                         data-numero="<?php echo $gaceta['numero']; ?>"
                                                         data-id="<?php echo $gaceta['id'];?>">
-                                                    <i class="fas fa-user-edit"></i>
+                                                    <i class="far fa-edit"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-danger btn-circle btn-sm elim-gac"
                                                         data-id="<?php echo $gaceta['id']; ?>">

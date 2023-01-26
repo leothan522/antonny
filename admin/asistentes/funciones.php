@@ -3,7 +3,7 @@
 session_start();
 require "../seguridad.php";
 require "../../mysql/Query.php";
-$modulo = "asistentes";
+$modulo = "sesiones";
 $alert = null;
 $usuario = null;
 

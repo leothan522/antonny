@@ -26,7 +26,7 @@
             </li>
 
              <!-- Nav Item - Agendas -->
-             <li class="nav-item <?php if($modulo == "asistentes" && $modulo== "sesiones") { echo "active"; } ?>">
+             <li class="nav-item <?php if($modulo == "asistentes" || $modulo== "sesiones") { echo "active"; } ?>">
                 <a class="nav-link" href="<?php if($modulo == "dashboard") { echo "sesiones"; }else{ echo "../sesiones"; } ?>">
                     <i class="fas fa-users"></i>
                     <span>Sesiones</span></a>

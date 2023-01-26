@@ -9,7 +9,7 @@
         <div class="form-group">
             <label>Codigo de Sesion</label>
             <select class="form-control select2bs4" name="sesion_id" id="input_sesion" required>
-                <option>Seleccione</option>
+                <option value="">Seleccione</option>
                 <?php foreach ($sesiones as $sesion){ ?>
                     <option value="<?php echo $sesion['id'] ?>"><?php echo "Sesion ".$sesion['tipo']." ".$sesion['codigo'] ?></option>
                 <?php  } ?>
@@ -31,8 +31,8 @@
         <input type="hidden" name="opcion" value="guardar" id="input_opcion" />
         <input type="hidden" name="gacetas_id" id="input_gacetas_id" />
 
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-secondary float-right" id="btn_cancelar">Cancelar</button>
+        <button type="reset" class="btn btn-secondary" id="btn_cancelar">Cancelar</button>
+        <button type="submit" class="btn btn-primary float-right">Guardar</button>
 
     </form>
         

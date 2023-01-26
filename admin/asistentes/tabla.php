@@ -54,7 +54,7 @@
 
                                                 <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-circle btn-sm edit-sumario" 
                                                 data-id="<?php echo $persona['id']; ?>" data-agenda="<?php echo $verTema; ?>" >
-                                                <i class="fas fa-list-alt"></i>
+                                                    <i class="far fa-comment-alt"></i>
                                                 </button>
 
                                                 <button type="button" class="btn btn-danger btn-circle btn-sm elim-asistente"
