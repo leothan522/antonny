@@ -47,7 +47,7 @@
                 <option value="Coordinador de Seguimiento y Control">Coordinador de Seguimiento y Control</option>
                 <option value="Coordinador de la Comisión de Información y Comunicación">Coordinador de la Comisión de Información y Comunicación</option>
                 <option value="Representante Profesoral">Representante Profesoral</option>
-                <option value="Representante Estidiantil">Representante Estidiantil</option>
+                <option value="Representante Estudiantil">Representante Estudiantil</option>
                 <option value="Suplente">Suplente</option>
                 <option value="No aplica">No aplica</option>
             </select>

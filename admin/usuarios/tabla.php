@@ -42,8 +42,10 @@
                                                 ?>
                                             </td>
                                             <td>
-                                                <?php echo $usuario['role']; ?>/
-                                                <?php echo $usuario['created_at']; ?>
+                                                <?php /*echo $usuario['role']; */?>
+                                                <?php
+                                                $newDate = date("d-m-Y", strtotime($usuario['created_at']));
+                                                echo $newDate; ?>
                                             </td>
                                             <td class="text-center">
 
