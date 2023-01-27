@@ -71,7 +71,7 @@
 
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Descripcion</label>
-            <textarea class="form-control" name="descripcion" id="input_descripcion" cols="1" rows="3" required><?php if ($resol_id){ echo $get_resol['descripcion']; } ?></textarea>
+            <textarea class="form-control" name="descripcion" id="" cols="1" rows="3" required><?php if ($resol_id){ echo $get_resol['descripcion']; } ?></textarea>
         </div>
 
         <div class="form-group">

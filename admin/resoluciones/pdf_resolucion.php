@@ -13,9 +13,10 @@ function Header()
     $this->Image('../../img/logo.jpg', null, 5, 30, 30);
     $this->SetXY(10,15);
     $this->Cell(0,4,utf8_decode('REPÚBLICA BOLIVARIANA DE VENEZUELA'),0,1, 'C');
-    $this->Cell(0,4,utf8_decode('MINISTERIO DEL PODER POPULAR PARA LA EDUCACIÓN UNIVERSITARIA, CIENCIA Y TEGNOLOGÍA'),0,1, 'C');
+    $this->Cell(0,4,utf8_decode('MINISTERIO DEL PODER POPULAR PARA LA EDUCACIÓN UNIVERSITARIA'),0,1, 'C');
     $this->Cell(0,4,utf8_decode('UNIVERSIDAD NACIONAL EXPERIMENTAL DE LOS LLANOS CENTRALES RÓMULO GALLEGOS'),0,1, 'C');
     $this->Cell(0,4,utf8_decode('ÁREA DE INGENIERÍA EN SISTEMAS'),0,1, 'C');
+    $this->Cell(0,4,utf8_decode(' CONSEJO DE ÁREA'),0,1, 'C');
     $this->Ln(5);
 }
 

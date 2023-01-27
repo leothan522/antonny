@@ -72,7 +72,7 @@ $pdf->AliasNbPages();
 //pagina 1
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',11);
-$pdf->Cell(0,5,'ASISTENCIAKSKJD',0,1,'C');
+$pdf->Cell(0,5,'AGENDA AL CONSEJO DE AREA',0,1,'C');
 $pdf->Cell(0,5,utf8_decode("Sesión ".$sesion['tipo']." Nro. ".$sesion['codigo']),0,1,'C');
 $pdf->Cell(0,5,utf8_decode(fechaEs($sesion['fecha'])),0,1,'C');
 $pdf->Cell(0,5,'Hora: '.$sesion['hora'],0,1,'C');
@@ -117,8 +117,8 @@ foreach ($temas as $tema) {
     $pdf->SetFont('Arial','B',10);
     $pdf->Cell(0,7,$nombre,0,1);
     $pdf->SetFont('Arial','',10);
-    $pdf->Cell(0,7,$cargo,0,1);
-    $pdf->MultiCell(0, 10, "Tema: \n".$tema['tema'], 1, "J");
+    $pdf->Cell(0,7,utf8_decode($cargo),0,1);
+    $pdf->MultiCell(0, 5, utf8_decode("Tema: \n".$tema['tema']), 1, "J");
     $pdf->Ln(5);
 }
 

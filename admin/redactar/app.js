@@ -3,6 +3,10 @@ $('.select2bs4').select2({
     theme: 'bootstrap4'
 });
 
+$('#summernote').summernote({
+    lang: 'es-ES' // default: 'en-US'
+});
+
 $("#destinatarios_id").change(function () {
     let estado = $("#destinatarios_id").val();
     let profesion;

@@ -27,10 +27,12 @@ require "funciones.php";
     <link href="../../plantilla/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- Select2 -->
-    <!--<link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">-->
     <link rel="stylesheet" href="../../plantilla/vendor/select2/css/select2.min.css">
-    <!--<link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">-->
     <link rel="stylesheet" href="../../plantilla/vendor/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+    <!-- summernote -->
+    <!--<link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">-->
+    <link rel="stylesheet" href="../../plantilla/vendor/summernote/summernote-bs4.min.css">
 
 </head>
 
@@ -107,6 +109,14 @@ require "funciones.php";
     <!-- Select2 -->
     <!--<script src="../../plugins/select2/js/select2.full.min.js"></script>-->
     <script src="../../plantilla/vendor/select2/js/select2.full.min.js"></script>
+
+    <!-- Summernote -->
+    <!--<script src="../../plugins/summernote/summernote-bs4.min.js"></script>-->
+    <script src="../../plantilla/vendor/summernote/summernote-bs4.min.js"></script>
+    <!-- include summernote-ko-KR -->
+    <!--<script src="lang/summernote-ko-KR.js"></script>-->
+    <script src="../../plantilla/vendor/summernote/lang/summernote-es-ES.min.js"></script>
+
     <script src="app.js"></script>
 
 

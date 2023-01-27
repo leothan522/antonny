@@ -72,7 +72,7 @@ $pdf->AliasNbPages();
 //pagina 1
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',11);
-$pdf->Cell(0,5,'ASISTENCIAKSKJD',0,1,'C');
+$pdf->Cell(0,5,'ASISTENCIA AL CONSEJO DE AREA',0,1,'C');
 $pdf->Cell(0,5,utf8_decode("Sesión ".$sesion['tipo']." Nro. ".$sesion['codigo']),0,1,'C');
 $pdf->Cell(0,5,utf8_decode(fechaEs($sesion['fecha'])),0,1,'C');
 $pdf->Cell(0,5,'Hora: '.$sesion['hora'],0,1,'C');
@@ -145,7 +145,7 @@ foreach ($coordinaciones as $persona) {
 //paginA 2
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',11);
-$pdf->Cell(0,5,'ASISTENCIAKSKJD',0,1,'C');
+$pdf->Cell(0,5,'ASISTENCIA AL CONSEJO DE AREA',0,1,'C');
 $pdf->Cell(0,5,utf8_decode("Sesión ".$sesion['tipo']." Nro. ".$sesion['codigo']),0,1,'C');
 $pdf->Cell(0,5,utf8_decode(fechaEs($sesion['fecha'])),0,1,'C');
 $pdf->Cell(0,5,'Hora: '.$sesion['hora'],0,1,'C');

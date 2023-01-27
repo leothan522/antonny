@@ -103,7 +103,7 @@
 
     
 
-        <textarea name="tema" class="form-control" rows="1" cols="10" id="tema_sumario">
+        <textarea name="tema" class="form-control" rows="5" cols="10" id="tema_sumario">
         </textarea>
        
         <input type="hidden" name="asistencias_id" id="sumario_asistentes">
