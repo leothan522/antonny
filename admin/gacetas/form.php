@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form  method="POST" id="form_gacetas">
+    <form action="guardar.php"  method="POST" id="form_gacetas">
 
         <div class="form-group">
             <label>Codigo de Sesion</label>

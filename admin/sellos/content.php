@@ -6,7 +6,10 @@
 <div class="row">
     
     <div class="col-md-8">
-        
+
+        <div class="col-md-12">
+            <?php display_flash_message(); ?>
+        </div>
     
         <div class="card shadow mb-4">
             <div class="card-header py-3">

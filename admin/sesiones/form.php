@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form  method="POST" id="form_sesiones">
+    <form action="guardar.php"  method="POST" id="form_sesiones">
 
         <div class="form-group" >
             <label>Tipo de Sesión</label>

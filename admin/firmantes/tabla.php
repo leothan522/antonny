@@ -51,7 +51,7 @@
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
 
-                                                <form method="post" class="d-none"  id="form_eliminar_<?php echo $usuario['id']; ?>">
+                                                <form action="guardar.php" method="post" class="d-none"  id="form_eliminar_<?php echo $usuario['id']; ?>">
                                                     <input type="text" name="opcion" value="eliminar" />
                                                     <input type="text" name="firmantes_id" value="<?php echo $usuario['id']; ?>" />
                                                 </form>

@@ -1,5 +1,6 @@
 <?php
 require "funciones.php";
+require "../flash_message.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">

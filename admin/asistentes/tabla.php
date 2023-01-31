@@ -62,9 +62,10 @@
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
 
-                                                <form method="post" class="d-none"  id="form_eliminar_<?php echo $persona['id']; ?>">
+                                                <form action="guardar.php" method="post" class="d-none"  id="form_eliminar_<?php echo $persona['id']; ?>">
                                                     <input type="text" name="opcion" value="eliminar" />
                                                     <input type="text" name="asistencias_id" value="<?php echo $persona['id']; ?>" />
+                                                    <input type="hidden" name="sesion_id" value="<?php echo $sesion_id; ?>" />
                                                 </form>
                                             </td>
                                             
@@ -85,7 +86,7 @@
                         <a href="pdf_agenda.php?id=<?php echo $sesion_id; ?>" class="btn btn-primary" target="_blank">Imprimir Agenda</a>
                         
 
-<form  method="post">
+<form action="guardar.php"  method="post">
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -107,6 +108,7 @@
         </textarea>
        
         <input type="hidden" name="asistencias_id" id="sumario_asistentes">
+          <input type="hidden" name="sesion_id" value="<?php echo $sesion_id; ?>" />
         <input type="hidden" value="<?php echo $sesion_id; ?>" name="sesiones_id" id="sumario_sesiones">
 
    

@@ -24,14 +24,4 @@ if ($_GET)
     }
 }
 
-function guardarFirma($path, $id)
-{
-    $hoy = date("Y-m-d");
-    $query = new Query();
-    $sql = "UPDATE `firmantes` SET `path_firma`='$path', `update_at`='$hoy' WHERE  `id`=$id;";
-    $row = $query->save($sql);
-    return $row;
-}
-
-
 ?>

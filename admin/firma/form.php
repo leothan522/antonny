@@ -1,4 +1,4 @@
-<form  method="POST" enctype="multipart/form-data">
+<form action="guardar.php"  method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
         <label>Añadir imagen</label>
@@ -10,10 +10,10 @@
     </div>
 
     <input type="hidden" name="firmante_id" value="<?php echo $firmante_id; ?>">
-    
 
-    <button type="submit" name="subir" class="btn btn-primary">Subir</button>
-    <a href="../firmantes/" class="btn btn-secondary float-right">Cancelar</a>
+
+    <a href="../firmantes/" class="btn btn-secondary ">Cancelar</a>
+    <button type="submit" name="subir" class="btn btn-primary float-right">Subir</button>
 
 
 </form>

@@ -24,7 +24,8 @@
                     <div class="modal-body">
 
                         <p class="text-danger text-center">No se pueden crear resoluciones hasta que no se cargue <br>
-                            <strong class="text-danger">el sello</strong> y se definan <strong class="text-danger">los firmantes</strong>.</p>
+                            <strong class="text-danger">el sello</strong> y se definan <strong class="text-danger">los firmantes</strong>,
+                            <br> tanto el Presidente como el Secretario</p>
 
                     </div>
                     <div class="modal-footer">
@@ -41,22 +42,7 @@
     <div class="col-md-12">
 
         <?php
-
-        if($alert){
-            ?>
-
-            <div class="alert alert-<?php echo $alert; ?> alert-dismissible fade show" role="alert">
-                <strong><?php echo $message; ?></strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <?php
-
-
-        }
-
+            display_flash_message();
         ?>
 
     </div>

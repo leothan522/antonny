@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form  method="POST" id="form_firmantes">
+    <form action="guardar.php"  method="POST" id="form_firmantes">
 
         <div class="form-group">
             <label>Nombre</label>
@@ -33,8 +33,8 @@
         <input type="hidden" name="opcion" value="guardar" id="input_opcion" />
         <input type="hidden" name="firmantes_id" id="input_firmantes_id" />
 
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-secondary float-right" id="btn_cancelar">Cancelar</button>
+        <button type="reset" class="btn btn-secondary" id="btn_cancelar">Cancelar</button>
+        <button type="submit" class="btn btn-primary float-right">Guardar</button>
 
     </form>
         

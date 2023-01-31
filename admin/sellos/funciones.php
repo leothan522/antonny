@@ -5,14 +5,6 @@ require "../seguridad.php";
 require "../../mysql/Query.php";
 $modulo = "sellos";
 
-function guardarSello($path)
-{
-    $hoy = date("Y-m-d");
-    $query = new Query();
-    $sql = "INSERT INTO `sellos` (`path`) VALUES ('$path');";
-    $row = $query->save($sql);
-    return $row;
-}
 
 function getSello()
 {

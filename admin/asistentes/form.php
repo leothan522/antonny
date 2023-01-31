@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form  method="POST" id="form_asistencias">
+    <form action="guardar.php"  method="POST" id="form_asistencias">
 
     <div class="form-group" >
             <label>Tipo</label>
@@ -63,6 +63,7 @@
 
         <input type="hidden" name="opcion" value="guardar" id="input_opcion" />
         <input type="hidden" name="asistentes_id" id="input_asistentes_id" />
+        <input type="hidden" name="sesion_id" id="input_asistentes_id" value="<?php echo $sesion_id; ?>" />
 
         <button type="reset" class="btn btn-secondary" id="btn_cancelar">Cancelar</button>
         <button type="submit" class="btn btn-primary float-right">Guardar</button>

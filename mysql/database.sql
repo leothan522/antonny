@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `firmantes` (
   `nombre` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
   `profesion` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
   `cargo` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
-  `path_firma` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci DEFAULT NULL,
+  `path_firma` text CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci,
   `band` int NOT NULL,
   `created_at` date DEFAULT NULL,
   `update_at` date DEFAULT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `gacetas` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `sesiones_id` int unsigned NOT NULL,
   `fecha` date NOT NULL,
-  `numero` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `numero` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `band` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -98,9 +98,9 @@ CREATE TABLE IF NOT EXISTS `resoluciones` (
   `id` int NOT NULL AUTO_INCREMENT,
   `sesiones_id` int NOT NULL,
   `codigo` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
-  `profesion` varchar(50) COLLATE utf8mb3_spanish_ci NOT NULL,
-  `nombre` varchar(50) COLLATE utf8mb3_spanish_ci NOT NULL,
-  `cargo` varchar(50) COLLATE utf8mb3_spanish_ci NOT NULL,
+  `profesion` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
+  `nombre` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
+  `cargo` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
   `de` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
   `fecha` date NOT NULL,
   `asunto` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `resoluciones` (
 -- Volcando estructura para tabla gacetas.sellos
 CREATE TABLE IF NOT EXISTS `sellos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `path` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
+  `path` text CHARACTER SET utf8mb3 COLLATE utf8mb3_spanish_ci NOT NULL,
   `band` int DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_spanish_ci;

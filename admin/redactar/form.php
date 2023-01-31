@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form <?php if (!$resol_id) { echo 'action="../resoluciones/"'; } ?>  method="POST">
+    <form action="guardar.php"  method="POST">
 
         <div class="form-group">
             <label>Codigo de Sesion</label>

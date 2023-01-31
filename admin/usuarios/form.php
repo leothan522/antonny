@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form  method="POST" id="form_usuarios">
+    <form action="guardar.php"  method="POST" id="form_usuarios">
 
         <div class="form-group">
             <label>Nombre</label>

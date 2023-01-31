@@ -5,9 +5,12 @@
 
 <div class="row">
 
+    <div class="col-md-12">
+        <?php display_flash_message(); ?>
+    </div>
+
 <div class="col-md-8">
-        
-    
+
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Firma de <?php echo strtoupper($firmante['nombre']); ?></h6>

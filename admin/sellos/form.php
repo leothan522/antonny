@@ -1,4 +1,4 @@
-<form  method="POST" enctype="multipart/form-data">
+<form action="guardar.php"  method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
         <label>Añadir imagen</label>
