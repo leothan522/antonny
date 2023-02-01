@@ -100,8 +100,9 @@ require "../flash_message.php";
     <script src="../../plantilla/js/demo/datatables-demo.js"></script>
 
     <!-- Sweetalert2 -->
-<script src="../../plantilla/js/sweetalert2.all.min.js"></script>
-<script src="app.js" type="text/javascript"></script>
+    <script src="../../plantilla/js/sweetalert2.all.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+
 
 
 

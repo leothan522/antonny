@@ -28,9 +28,9 @@ if (isset($_POST['subir'])) {
         $tamano = $_FILES['archivo']['size'];
         $temp = $_FILES['archivo']['tmp_name'];
         //Se comprueba si el archivo a cargar es correcto observando su extensión y tamaño
-        if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")) && ($tamano < 2000000))) {
+        if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")) && ($tamano < 8000000))) {
             $message = '<div><b>Error. La extensión o el tamaño de los archivos no es correcta.<br/>
-        - Se permiten archivos .gif, .jpg, .png. y de 200 kb como máximo.</b></div>';
+        - Se permiten archivos .gif, .jpg, .png. y de 800KB como máximo.</b></div>';
             $alert = 'danger';
             crearFlashMessage($alert, $message, '../firma/index.php?id='.$id);
         } else {

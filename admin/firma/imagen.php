@@ -1,8 +1,9 @@
 <?php
 
 if (!empty($firmante['path_firma'])){
-    echo  '<p class="text-center"><img src="'.$firmante['path_firma'].'" class="img-thumbnail"></p>';
+    echo  '<p class="text-center" id="uploadForm"><img src="'.$firmante['path_firma'].'" class="img-thumbnail" width="300" height="300"></p>';
 }else{
-    echo "no se que paso con el sello";
+    echo '<p class="text-center" id="uploadForm">No se encuentra ningun sello registrado</p>';
 }
+
 ?>

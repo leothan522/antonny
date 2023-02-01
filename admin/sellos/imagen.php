@@ -1,9 +1,9 @@
 <?php
 
 if (!empty($sello)){
-    echo  '<p class="text-center"><img src="'.$sello['path'].'" class="img-thumbnail"></p>';
+    echo  '<p class="text-center" id="uploadForm"><img src="'.$sello['path'].'" class="img-thumbnail" width="300" height="300"></p>';
 }else{
-    echo "No se encuentra ningun sello registrado";
+    echo '<p class="text-center" id="uploadForm">No se encuentra ningun sello registrado</p>';
 }
 
 ?>
